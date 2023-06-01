@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom PC Builder - Your Custom PC, Your Way</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Custom PC, Your Way</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#build">Build Your PC</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Custom PC Builder!</h2>
+        <p>Design and customize your perfect PC with AMD CPUs, GeForce GPUs, and black or white cases.</p>
+    </section>
+
+    <section id="build">
+        <h2>Build Your PC</h2>
+        <form method="post" action="order.php">
+            <h3>Processor</h3>
+            <select name="processor">
+                <option value="ryzen5">AMD Ryzen 5</option>
+                <option value="ryzen7">AMD Ryzen 7</option>
+                <option value="ryzen9">AMD Ryzen 9</option>
+                <!-- Add more processor options -->
+            </select>
+
+            <h3>Graphics Card</h3>
+            <select name="graphics-card">
+                <option value="gtx1660">GeForce GTX 1660</option>
+                <option value="rtx3060">GeForce RTX 3060</option>
+                <option value="rtx3080">GeForce RTX 3080</option>
+                <!-- Add more graphics card options -->
+            </select>
+
+            <h3>Case Color</h3>
+            <input type="radio" id="black" name="case-color" value="black" checked>
+            <label for="black">Black</label>
+            <input type="radio" id="white" name="case-color" value="white">
+            <label for="white">White</label>
+
+            <h3>RAM</h3>
+            <input type="number" name="ram" min="4" max="64" placeholder="RAM in GB" required>
+
+            <!-- Add more customizable options -->
+
+            <input type="submit" name="submit" value="Order Now">
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Custom PC Builder. All rights reserved.</p>
+    </footer>
+</body>
+</html>
